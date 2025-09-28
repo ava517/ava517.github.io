@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aller Travel Atelier 安遊旅行工作室 — 美西旅行 · 客製化旅遊 · 顧問服務</title>
+  <style>
+    /* 簡單版面與樣式 */
+    :root{
+      --accent: #f7c843;
+      --muted: #666;
+      --bg: #fffbea;
+      --card: #ffffff;
+      font-family: "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    header{
+      background: linear-gradient(90deg, var(--accent), #4aa3ff);
+      color:white;
+      padding:28px 18px;
+      text-align:center;
+    }
+    .container{
+      max-width:980px;
+      margin:20px auto;
+      padding:0 16px;
+    }
+    h1{ margin:0; font-size:1.6rem; letter-spacing:0.4px; }
+    p.lead{ margin:8px 0 0; color:rgba(255,255,255,0.9); font-weight:500; }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 20px rgba(12,30,60,0.06);
+      margin-top:18px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    @media(min-width:720px){
+      .grid{ grid-template-columns:repeat(2,1fr); }
+      header{ padding:36px 18px; }
+      h1{ font-size:1.9rem; }
+    }
+    .service-title{ font-weight:700; margin-bottom:6px; }
+    .muted{ color:var(--muted); font-size:0.95rem; }
+    .cta{
+      display:inline-block;
+      margin-top:12px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:var(--accent);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:0.9rem;
+      padding:28px 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Aller Travel Atelier — 安遊旅行工作室</h1>
+      <p class="lead">美西旅行 · 提供客製化旅遊與顧問服務，為你量身規劃每一次旅程</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 style="margin-top:0">關於我們</h2>
+      <p class="muted">Aller Travel Atelier（安遊旅行工作室）專注於美西（West Coast USA）深度行程與客製化體驗。我們協助旅客規劃行程、預訂交通與住宿，並提供在地顧問服務與私人導覽建議。</p>
+    </section>
+
+    <section class="card grid" aria-label="服務項目">
+      <div>
+        <h3 class="service-title">客製化行程規劃</h3>
+        <p class="muted">依旅客興趣（城市、自然、攝影、表演/街舞）訂製每日行程，節奏與預算皆可調整。</p>
+        <a class="cta" href="#contact">立即詢問</a>
+      </div>
+
+      <div>
+        <h3 class="service-title">旅遊顧問 & 在地資源</h3>
+        <p class="muted">提供簽證注意事項、交通建議、在地餐廳與活動推薦，並協助處理突發狀況。</p>
+      </div>
+    </section>
+
+    <section class="card" id="contact">
+      <h2 style="margin-top:0">聯絡我們</h2>
+      <p class="muted">Email：ava5172001@gmail.com（範例）<br>或填寫預約表單，我們會在 48 小時內回覆。</p>
+      <p style="margin-top:12px"><strong>想法小提示：</strong>請在訊息內註明出發城市、旅遊天數與預算，方便我們快速為你量身規劃。</p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Aller Travel Atelier — 安遊旅行工作室 · 美西旅行
+  </footer>
+
+  <script>
+    // 自動顯示今年年份
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
